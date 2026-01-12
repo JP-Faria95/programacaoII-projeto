@@ -230,3 +230,9 @@ function carrega_selectpicker(id_selectpicker,tipo,evento='',id_categoria=''){
         }
     });
 }
+
+// FUNÇÃO QUE VAI LER O PARAMETRO DA URL PARA VERIFICAR SE O ACESSO É UM ADMIN_TESTE
+function verifica_parametro_url(parametro){
+    var url = new URLSearchParams(window.location.search);
+    return url.has(parametro) ? url.get(parametro) : null;
+}
