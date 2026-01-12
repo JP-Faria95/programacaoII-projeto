@@ -211,13 +211,15 @@
 
         // Verifica se o acesso é por meio de 'admin_teste' para experiência dos usuários no GitHub
         var admin_teste = verifica_parametro_url('admin_teste');
+        console.log("O valor de 'admin_teste' é: ", admin_teste);
         if(admin_teste){
+            console.log("Admin é true, vai disparar o botão de logar");
             $('#btn_login_continuar').trigger('click');
         }
 
         // Clique no botão 'Continuar' na tela de login
         $('#btn_login_continuar').off('click').on('click',function(){  
-
+            console.log("Clicou no botão");
             // Checa se preencheu os campos Usuário e Senha
             if(!cadastro_valida_campo_input('div_tela_login') && !admin_teste){
                 $.notify("Preencha todos os campos","error");
@@ -226,6 +228,7 @@
 
             // Verifica no banco se existe o cadastro
             else{
+                console.log("Chamou o ajax");
                 $.ajax({
                     url: 'ajax.php',
                     type: 'post',
@@ -237,6 +240,7 @@
                         admin_teste: admin_teste ? admin_teste : null
                     },
                     success: function(resultado){
+                        console.log("Success do ajax");
                         if(resultado.sucesso){
                             var usuario = $('#input_usuario').val();
                             $('#div_cadastro_login_realizado').show();
