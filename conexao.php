@@ -1,9 +1,9 @@
 <?php
 
-$host = 'localhost';
-$user = 'root';
-$senha = '1234';
-$bdnome = 'Projeto_Ling_Prog_2';
+$host   = getenv('DB_HOST');
+$user   = getenv('DB_USER');
+$senha  = getenv('DB_PASS');
+$bdnome = getenv('DB_NAME');
 
 $con = new mysqli($host,$user,$senha,$bdnome);
 
