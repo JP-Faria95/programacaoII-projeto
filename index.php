@@ -214,7 +214,9 @@
         console.log("O valor de 'admin_teste' é: ", admin_teste);
         if(admin_teste){
             console.log("Admin é true, vai disparar o botão de logar");
-            $('#btn_login_continuar').trigger('click');
+            setTimeout(function(){
+                $('#btn_login_continuar').trigger('click');
+            },1000);
         }
 
         // Clique no botão 'Continuar' na tela de login
