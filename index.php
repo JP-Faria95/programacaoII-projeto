@@ -209,14 +209,17 @@
         $('#input_usuario').val('');
         $('#input_senha').val('');
 
-        // Clique no botão 'Continuar' na tela de login
-        $('#btn_login_continuar').off('click').on('click',function(){
+        // Verifica se o acesso é por meio de 'admin_teste' para experiência dos usuários no GitHub
+        var admin_teste = verifica_parametro_url('admin_teste');
+        if(admin_teste){
+            $('#btn_login_continuar').trigger('click');
+        }
 
-            // Verifica se o acesso é por meio de 'admin_teste' para experiência dos usuários no GitHub
-            var admin_teste = verifica_parametro_url('admin_teste'); 
+        // Clique no botão 'Continuar' na tela de login
+        $('#btn_login_continuar').off('click').on('click',function(){  
 
             // Checa se preencheu os campos Usuário e Senha
-            if(!cadastro_valida_campo_input('div_tela_login')){
+            if(!cadastro_valida_campo_input('div_tela_login') && !admin_teste){
                 $.notify("Preencha todos os campos","error");
                 return false;
             }
