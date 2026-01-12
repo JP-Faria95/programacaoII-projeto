@@ -212,6 +212,9 @@
         // Clique no botão 'Continuar' na tela de login
         $('#btn_login_continuar').off('click').on('click',function(){
 
+            // Verifica se o acesso é por meio de 'admin_teste' para experiência dos usuários no GitHub
+            var admin_teste = verifica_parametro_url('admin_teste'); 
+
             // Checa se preencheu os campos Usuário e Senha
             if(!cadastro_valida_campo_input('div_tela_login')){
                 $.notify("Preencha todos os campos","error");
@@ -227,7 +230,8 @@
                     data: {
                         acao: 'realiza_login',
                         usuario: $('#input_usuario').val(),
-                        senha: $('#input_senha').val()
+                        senha: $('#input_senha').val() ? $('#input_senha').val() : null,
+                        admin_teste: admin_teste ? admin_teste : null
                     },
                     success: function(resultado){
                         if(resultado.sucesso){
