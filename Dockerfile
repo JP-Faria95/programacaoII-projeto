@@ -13,7 +13,6 @@ RUN chown -R www-data:www-data /var/www/html
 EXPOSE 80
 
 # Define as variáveis de ambiente no Dockerfile
-//ENV DB_HOST=140e428a5b7f15c47adf65edf1e997e4
 ENV hostname = b05fb0e20b14b09d19e61bf5e00515c6
 ENV DB_NAME=3e533f2998b32f02b29c7ee29b9b4614
 ENV DB_PASS=aa8bc69338a39dca5c82c6c166b1606f
