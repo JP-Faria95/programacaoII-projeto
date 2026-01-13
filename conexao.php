@@ -1,17 +1,9 @@
 <?php
 
-//$host   = getenv('DB_HOST');
-$host   = getenv('hostname');
-$user   = getenv('DB_USER');
-$senha  = getenv('DB_PASS');
-$bdnome = getenv('DB_NAME');
-
-echo "Host: " . $host;
-echo "User: " . $user;
-echo "Senha: " . $senha;
-echo "Nome: " . $bdnome;
-
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+$host = 'localhost';
+$user = 'root';
+$senha = '1234';
+$bdnome = 'Projeto_Ling_Prog_2';
 
 $con = new mysqli($host,$user,$senha,$bdnome);
 
