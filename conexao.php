@@ -5,6 +5,11 @@ $user   = getenv('DB_USER');
 $senha  = getenv('DB_PASS');
 $bdnome = getenv('DB_NAME');
 
+echo "Host: " . $host;
+echo "User: " . $user;
+echo "Senha: " . $senha;
+echo "Nome: " . $bdnome;
+
 $con = new mysqli($host,$user,$senha,$bdnome);
 
 if($con -> connect_error){
