@@ -10,6 +10,8 @@ echo "User: " . $user;
 echo "Senha: " . $senha;
 echo "Nome: " . $bdnome;
 
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 $con = new mysqli($host,$user,$senha,$bdnome);
 
 if($con -> connect_error){
