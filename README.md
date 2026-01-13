@@ -1,4 +1,4 @@
-❗Seja bem vindo.
+❗ Seja bem vindo.
 
 ✔️ Este é um projeto Web de nível Iniciante com objetivo de criar um sistema de controle de Categorias e Produtos, permitindo o gerenciamento de informações como nome, estoque, valor e status de ativo ou inativo.
 
