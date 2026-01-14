@@ -23,6 +23,15 @@ saiba o estoque e o valor de cada produto da categoria escolhida, facilitando a 
 que deseja comprar. Por fim, é possível visualizar o carrinho de compras, que detalha ao usuário cada produto escolhido, bem como as quantidades, a data em que o produto foi adicionado, o preço por unidade do produto
 e o valor total para cada produto. Ao escolher prosseguir com a compra dos produtos, o usuário então visualiza o valor total e pode escolher finalizar a compra.
 
+💻 Para executar este projeto localmente, você deverá:
+1) Clone o repositório através do comando "git clone https://github.com/JP-Faria95/programacaoII-projeto.git".
+2) Utilizando um programa de ambiente de desenvolvimento web local (utilizei o Laragon na versão V8.4.0), transfira o repositório clonado para a pasta raíz do servidor web.
+3) Inicie o ambiente web local, e acesse o phpMyAdmin com suas credenciais.
+4) Crie um banco de dados para utilizar no projeto e execute os scripts do arquivo 'tabelas.sql'.
+5) Configure o arquivo 'conexao.php' com as credenciais do seu banco de dados local (host,user,senha,nome do banco).
+6) Agora você conseguirá acessar a aplicação através do link 'localhost/programacaoII-projeto/index.php'.
+7) Dica: Para acessar como um usuário administrador e conferir as funcionalidades, adicione a variável '?admin_teste=true' no final da url.
+
 🧩 Ao desenvolver este projeto, busquei aprofundar meus conhecimentos e habilidades nos recursos de front-end amplamente utilizados como:
 
 . DataTables para construção de tabelas dinâmicas de registros trazidos do back-end
